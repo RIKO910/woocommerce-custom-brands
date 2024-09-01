@@ -5,6 +5,9 @@ class WC_Brands_Frontend {
     public static function init() {
         add_action('woocommerce_single_product_summary', array(__CLASS__, 'display_product_brand'), 6);
         add_filter('template_include', array(__CLASS__, 'brand_template_include'), 99);
+
+
+
     }
 
     public static function display_product_brand() {
@@ -27,4 +30,6 @@ class WC_Brands_Frontend {
         }
         return $template;
     }
+
+
 }
